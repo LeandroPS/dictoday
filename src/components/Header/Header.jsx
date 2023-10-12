@@ -11,15 +11,29 @@ const Grid = styled.div`
 `;
 
 const Title = styled.h1`
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 24px;
     margin: 0;
 `;
 
-const Header = ({ appName }) => (
+const LogoWrapper = styled.div`
+    display: flex;
+    align-items: center;
+`;
+
+const Logo = styled.img`
+    width: 30px;
+    margin-right: 12px;
+`;
+
+const Header = ({ title, logo }) => (
     <Wrapper>
         <Container>
             <Grid>
-                <Title>{appName}</Title>
+                <LogoWrapper>
+                    <Logo src={logo} />
+                    <Title>{title}</Title>
+                </LogoWrapper>
             </Grid>
         </Container>
     </Wrapper>
